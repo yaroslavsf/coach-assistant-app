@@ -3,19 +3,33 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
 import {Navbar} from './components/Navbar'
+import {Header} from './components/Header'
+import {Footer} from './components/Footer'
 
+import {UsersList} from './components/UsersList'
+import {CreateUser} from './components/CreateUser'
+import {ExercisesList} from './components/ExercisesList'
+import {CreateExercise} from './components/CreateExercise'
+import {EditExercise} from './components/EditExercise'
 function App() {
   return (
     <div className="App">
       <Router>
-      <h1>Coach assistant</h1>
-      <h2>Regulation system of trainings</h2>
-      <hr/>
-      <Navbar>
-        <Routes>
-          {/* TODO */}
-        </Routes>
-      </Navbar>
+        <nav><Navbar/></nav>
+        <header><Header/></header>
+        <main className='container'>
+          <hr/>
+          <div id='main-box'>
+          <Routes>
+            <Route path="/" element={<ExercisesList/>}/>
+            <Route path="/user" element={<CreateUser/>}/>
+            <Route path="/users" element={<UsersList/>}/>
+            <Route path="/create" element={<CreateExercise/>}/>
+            <Route path="/edit/:id" element={<EditExercise/>}/>
+          </Routes>
+          </div>
+        </main>
+        <footer><Footer/></footer>
       </Router>
     </div>
     

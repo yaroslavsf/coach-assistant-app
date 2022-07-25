@@ -1,5 +1,53 @@
 .App {
   text-align: center;
-  padding: 30px, 5%;
+
+}
+
+#main-box {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+.nav-link {
+  color: bisque !important;
+  padding: 0px 15px !important;
+}
+
+.nav-link:hover {
+  color: lightgreen !important;
+} 
+
+.my-form,
+.my-list {
+  border: 1px, solid silver;
+  border-radius: 15px;
+  padding: 30px 50px 35px 50px;
+  margin: 20px auto;
+  width: 40%;
+  box-shadow: 10px 10px 30px silver;
+  text-align: left; 
+}
+
+.my-form .btn {
+  width: 150px;
+  border-radius: 5px;
+  margin: 25px 0px 15px 0px;
+}
+
+.my-list {
+  padding-left: 6%;
+  font: 12pt 'Comic Sans MS';
+  padding-top: 35px;
+}
+
+.my-form label {
+  margin-top: 5px;
+}
+
+select {
+  margin-left: 15px;
+  width: 250px;
+  padding: 5px;
 }
 
