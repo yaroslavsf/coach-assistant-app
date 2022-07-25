@@ -11,7 +11,7 @@ export const Exercise = (props) => {
                 <Link to={'/edit/' + props.exercise._id} className="btn btn-sm btn-success">
                     Update
                 </Link>
-                <button onClick={() => props.deleteExercise(props.exercise._id)} className="btn btn-sm btn-success">
+                <button onClick={() => props.deleteExercise(props.exercise._id)} className="btn btn-sm btn-danger">
                     Delete
                 </button>
             </td>

@@ -8,7 +8,7 @@ export const ExercisesList = () => {
     
     useEffect(() => {
         axios.get('http://localhost:5000/exercises')
-        .then(result => setExercises(result.data))
+        .then(result => {setExercises(result.data)})
         .catch(error => console.log(error))
     }, [])
 
@@ -21,11 +21,11 @@ export const ExercisesList = () => {
     }
 
 
-    const displayExercisesList = () => {
+    const displayExercisesList = () => (
         exercises.map(item => (
             <Exercise key={item._id} exercise={item} deleteExercise={deleteExercise}/>
         ))
-    }
+    )
     return (
         <>
             <h3 style={{color:'navy'}}>All exercises list</h3>

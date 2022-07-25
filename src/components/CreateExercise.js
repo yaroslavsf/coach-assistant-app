@@ -12,7 +12,9 @@ export const CreateExercise = () => {
 
     useEffect(() => {
         axios.get('http://localhost:5000/users')
-        .then(result => setUsers(result.data.map(user => user.username)))
+        .then(result => {
+            setUsers(result.data.map(user => user.username))
+            setUsername(result.data[0].username); })
         .catch(error => console.log(error.response.data))
     }, [])
 
@@ -46,6 +48,8 @@ export const CreateExercise = () => {
         await axios.post('http://localhost:5000/exercises/add', exercise)
         .then(result => console.log(result.data))
         .catch(error => console.log(error.response.data))
+
+
 
         //just to go to '/' url after all operations
         window.location = '/';
